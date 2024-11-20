@@ -18,8 +18,8 @@ export class SignInComponent{
   router = inject(Router)
   handleSignIn(username:any, password:any){
    this.auth.onSignIn(username, password).subscribe(() => {
-    localStorage.setItem("token", this.token)
-    this.router.navigate(["home"])
+     localStorage.setItem("token", this.token)
+     this.router.navigate([""])
    })
   }
 }
